@@ -15,6 +15,9 @@ HDF5_LIB_DIR=/usr/local/lib
 CPPZMQ_INC_DIR=$(HOME)/chime/cppzmq
 MSGPACK_INC_DIR=/usr/local/include
 
+PROTOBUF_INC=$(shell pkg-config --cflags protobuf)
+PROTOBUF_LIB=$(shell pkg-config --libs protobuf)
+
 #
 # C++ command line
 # Don't forget -std=c++11 -pthread -fPIC

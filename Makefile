@@ -28,26 +28,36 @@ endif
 #    brew install msgpack
 #
 #
+#######
+#
+# Testing google protocol buffers (protobuf) v3 for the message encoding.
+#
+#     brew install protobuf
+#
+
 
 BINARIES=ch-frb-l1 ch-frb-simulate-l0 rpc-client
 
 all: $(BINARIES)
 
-INCFILES = ch_frb_rpc.hpp
+INCFILES = ch_frb_rpc.hpp rpc.pb.h
 
-L1_OBJS = ch-frb-l1.o ch_frb_rpc.o
+L1_OBJS = ch-frb-l1.o ch_frb_rpc.o rpc.pb.cc
+
+rpc.pb.cc rpc.pb.h: rpc.proto
+	protoc --cpp_out . $^
 
 # Compile flags
-CPP_CFLAGS = -I$(CPPZMQ_INC_DIR) -I$(MSGPACK_INC_DIR)
+CPP_CFLAGS = -I$(CPPZMQ_INC_DIR) -I$(MSGPACK_INC_DIR) $(PROTOBUF_INC)
 
 %.o: %.cpp $(INCFILES)
 	$(CPP) -c -o $@ $< $(CPP_CFLAGS)
 
 rpc-client: rpc_client.o
-	$(CPP) -o $@ $^ $(CPP_LFLAGS) -lch_frb_io -lzmq
+	$(CPP) -o $@ $^ $(CPP_LFLAGS) -lch_frb_io -lzmq $(PROTOBUF_LIB)
 
 ch-frb-l1: $(L1_OBJS)
-	$(CPP) -o $@ $^ $(CPP_LFLAGS) -lch_frb_io -lzmq
+	$(CPP) -o $@ $^ $(CPP_LFLAGS) -lch_frb_io -lzmq $(PROTOBUF_LIB)
 
 ch-frb-simulate-l0: ch-frb-simulate-l0.cpp
 	$(CPP) -o $@ $< $(CPP_LFLAGS) -lch_frb_io
