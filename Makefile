@@ -53,7 +53,11 @@ CPP_CFLAGS = -I$(CPPZMQ_INC_DIR) -I$(MSGPACK_INC_DIR) $(PROTOBUF_INC)
 %.o: %.cpp $(INCFILES)
 	$(CPP) -c -o $@ $< $(CPP_CFLAGS)
 
-rpc-client: rpc_client.o
+# Duplicated for auto-generated protobuf file rpc.pb.cc
+%.o: %.cc $(INCFILES)
+	$(CPP) -c -o $@ $< $(CPP_CFLAGS)
+
+rpc-client: rpc_client.o rpc.pb.o
 	$(CPP) -o $@ $^ $(CPP_LFLAGS) -lch_frb_io -lzmq $(PROTOBUF_LIB)
 
 ch-frb-l1: $(L1_OBJS)

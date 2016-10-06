@@ -14,7 +14,12 @@
 // msgpack
 #include <msgpack.hpp>
 
+// protobuf
+#include <rpc.pb.h>
+
 using namespace std;
+
+namespace pb = ::google::protobuf;
 
 frb_rpc_server::frb_rpc_server(std::shared_ptr<intensity_network_stream> s) :
     stream(s)
@@ -84,6 +89,40 @@ static void *rpc_thread_main(void *opaque_arg) {
         //  Wait for next request from client
         socket.recv(&request);
         std::cout << "Received RPC request" << std::endl;
+
+        // Parse header.
+
+        RpcRequestHeader hdr;
+        hdr.ParseFromArray(request.data(), request.size());
+
+        //cout << "Request header: " << hdr << endl;
+
+        // Assume there's more...
+        zmq::message_t body;
+        socket.recv(&body);
+
+        cout << "Request for function name " << hdr.funcname() << endl;
+        cout << "Request args size: " << body.size() << endl;
+
+        string func = hdr.funcname();
+
+        if (func == "GetBeamMetadata") {
+            cout << "getBeamMetadata() request" << endl;
+            
+            GetBeamMetadata_Request req;
+            req.ParseFromArray(body.data(), body.size());
+
+            std::vector<
+                std::unordered_map<std::string, uint64_t> > R =
+                stream->get_statistics();
+            //msgpack::pack(buffer, R);
+
+            GetBeamMetadata_Response res;
+            pb::Map<string, pb::uint64>* m = res.mutable_metadata();
+            /// ugh
+
+        }
+
 
         const char* req_data = reinterpret_cast<const char *>(request.data());
 

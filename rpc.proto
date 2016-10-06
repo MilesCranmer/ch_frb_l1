@@ -15,9 +15,12 @@ message GetBeamMetadata_Response {
   repeated PerBeamMetadata beams = 3;
 }
 
+message RpcRequestHeader {
+  string funcname = 4;
+}
 
-// service L1Service {
-//   rpc GetBeamMetadata (GetBeamMetadata_Request) returns (GetBeamMetadata_Response);
-// }
+service L1Service {
+  rpc GetBeamMetadata (GetBeamMetadata_Request) returns (GetBeamMetadata_Response);
+}
 
-// option cc_generic_services = true;
+option cc_generic_services = true;
