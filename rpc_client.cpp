@@ -61,7 +61,6 @@ public:
         response->ParseFromArray(reply.data(), reply.size());
 
         cout << "Got response: " << response << endl;
-
     }
 
 protected:
@@ -132,29 +131,29 @@ int main() {
 
         cout << "Buffer size: " << buffer.size() << endl;
 
-        // no copy
-        zmq::message_t request(buffer.data(), buffer.size(), NULL);
+        // deep copy from pb::Map back to std::map
+        map<string, uint64_t> meta(resp.metadata().begin(),
+                                   resp.metadata().end());
 
-        cout << "Sending metadata request " << request_nbr << endl;
-        socket.send(request);
+        cout << "Main metadata:" << endl;
+        for (map<string,uint64_t>::iterator it = meta.begin();
+             it != meta.end(); it++) {
+            cout << "  " << it->first << ": " << it->second << endl;
+        }
 
-        //  Get the reply.
-        zmq::message_t reply;
-        socket.recv(&reply);
-        cout << "Received result " << request_nbr << endl;
-
-        cout << "Reply has size " << reply.size() << endl;
-
-        const char* reply_data = reinterpret_cast<const char *>(reply.data());
-
-        msgpack::object_handle oh =
-            msgpack::unpack(reply_data, reply.size());
-        msgpack::object obj = oh.get();
-        cout << obj << endl;
-
-
+        int nbeams = resp.beams_size();
+        for (int i=0; i<nbeams; i++) {
+            map<string, uint64_t> beam(resp.beams(i).metadata().begin(),
+                                       resp.beams(i).metadata().end());
+            cout << "Beam " << i << "metadata:" << endl;
+            for (map<string,uint64_t>::iterator it = beam.begin();
+                 it != beam.end(); it++) {
+                cout << "  " << it->first << ": " << it->second << endl;
+            }
+        }
 
 
+        /*
         // Send chunk request
         buffer = msgpack::sbuffer();
         
@@ -191,7 +190,7 @@ int main() {
             
         obj = oh.get();
         cout << obj << endl;
-
+         */
 
     }
     return 0;

@@ -90,70 +90,49 @@ static void *rpc_thread_main(void *opaque_arg) {
         socket.recv(&request);
         std::cout << "Received RPC request" << std::endl;
 
-        // Parse header.
-
+        // Parse RPC header.
         RpcRequestHeader hdr;
         hdr.ParseFromArray(request.data(), request.size());
+        string func = hdr.funcname();
 
-        //cout << "Request header: " << hdr << endl;
-
-        // Assume there's more...
+        // Assume the function arguments follow in a second ZMQ message
         zmq::message_t body;
         socket.recv(&body);
 
-        cout << "Request for function name " << hdr.funcname() << endl;
+        cout << "Request for function name " << func << endl;
         cout << "Request args size: " << body.size() << endl;
-
-        string func = hdr.funcname();
 
         if (func == "GetBeamMetadata") {
             cout << "getBeamMetadata() request" << endl;
-            
             GetBeamMetadata_Request req;
             req.ParseFromArray(body.data(), body.size());
 
+            // The actual underlying call...
             std::vector<
                 std::unordered_map<std::string, uint64_t> > R =
                 stream->get_statistics();
-            //msgpack::pack(buffer, R);
 
             GetBeamMetadata_Response res;
             pb::Map<string, pb::uint64>* m = res.mutable_metadata();
-            /// ugh
+            /// ugh, deep copy required
+            m->insert(R[0].begin(), R[0].end());
 
+            int nbeams = R.size() - 1;
+            //pb::RepeatedPtrField<GetBeamMetadata_Response_PerBeamMetadata>* beams = res.mutable_beams();
+            auto* beams = res.mutable_beams();
+            for (int i=0; i<nbeams; i++) {
+                //GetBeamMetadata_Response_PerBeamMetadata* pbm = beams->Add();
+                //pbm->mutable_metadata()->insert(R[i+1].begin(), R[i+1].end());
+                beams->Add()->mutable_metadata()->insert(
+                                   R[i+1].begin(), R[i+1].end());
+            }
+
+            string replystr = res.SerializeAsString();
+            zmq::message_t reply(reinterpret_cast<const void*>(replystr.data()),
+                                 replystr.size());
+            socket.send(reply);
         }
-
-
-        const char* req_data = reinterpret_cast<const char *>(request.data());
-
-        std::size_t offset = 0;
-        //msgpack::unpacker pac;
-        // feed the buffer.
-        //pac.reserve_buffer(request.size());
-        //memcpy(pac.buffer(), buffer.data(), buffer.size());
-        //pac.buffer_consumed(buffer.size());
-
-        msgpack::object_handle oh =
-            msgpack::unpack(req_data, request.size(), offset);
-
-        //msgpack::object obj = oh.get();
-        //string funcname = obj[0];
-        //msgpack::object args = obj[1];
-        string funcname = oh.get().as<string>();
-
-        //cout << "Request object: " << obj << endl;
-        cout << " Function name: " << funcname << endl;
-        //cout << " Function args: " << args << endl;
-
-        // RPC reply
-        msgpack::sbuffer buffer;
-
-        if (funcname == "get_beam_metadata") {
-            cout << "get_beam_metadata() called" << endl;
-            std::vector<
-                std::unordered_map<std::string, uint64_t> > R =
-                stream->get_statistics();
-            msgpack::pack(buffer, R);
+            /*
         } else if (funcname == "get_chunks") {
             cout << "get_chunks() called" << endl;
 
@@ -174,11 +153,11 @@ static void *rpc_thread_main(void *opaque_arg) {
         } else {
             msgpack::pack(buffer, "No such RPC method");
         }
-
         //  Send reply back to client
         cout << "Sending RPC reply of size " << buffer.size() << endl;
         zmq::message_t reply(buffer.data(), buffer.size(), NULL);
         socket.send(reply);
+             */
     }
 
     return NULL;
