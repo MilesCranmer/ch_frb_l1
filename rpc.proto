@@ -15,12 +15,48 @@ message GetBeamMetadata_Response {
   repeated PerBeamMetadata beams = 3;
 }
 
+
+message GetChunks_Request {
+  repeated uint64 beam = 5;
+  uint64 min_chunk = 6;
+  uint64 max_chunk = 7;
+}
+
+message GetChunks_Response {
+  repeated Chunk chunks = 8;
+}
+
+message Chunk {
+  // == ch_frb_io :: assembled_chunk
+  int32 beam_id = 9;
+  int32 nupfreq = 10;
+  int32 nt_per_packet = 11;
+  int32 fpga_counts_per_sample = 12;
+  int32 nt_coarse = 13;
+  int32 nscales = 14;
+  int32 ndata = 15;
+
+  uint64 ichunk = 16;
+  uint64 isample = 17;
+
+  // shape (constants::nfreq_coarse, nt_coarse)
+  repeated float scales = 18;
+  repeated float offsets = 19;
+
+  // shape (constants::nfreq_coarse, nupfreq, constants::nt_per_assembled_chunk)
+  bytes data = 20;
+}
+
+
+
+
 message RpcRequestHeader {
   string funcname = 4;
 }
 
 service L1Service {
   rpc GetBeamMetadata (GetBeamMetadata_Request) returns (GetBeamMetadata_Response);
+  rpc GetChunks (GetChunks_Request) returns (GetChunks_Response);
 }
 
 option cc_generic_services = true;

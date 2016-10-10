@@ -131,33 +131,67 @@ static void *rpc_thread_main(void *opaque_arg) {
             zmq::message_t reply(reinterpret_cast<const void*>(replystr.data()),
                                  replystr.size());
             socket.send(reply);
-        }
-            /*
-        } else if (funcname == "get_chunks") {
-            cout << "get_chunks() called" << endl;
 
-            // grab arg
-            cout << "Grabbing argument... offset: " << offset << endl;
-            msgpack::object_handle oh =
-                msgpack::unpack(req_data, request.size(), offset);
-            std::vector<std::vector<uint64_t> > args;
-            cout << "Arg: " << oh.get() << endl;
-            args = oh.get().as<decltype(args)>();
+        } else if (func == "GetChunks") {
+            cout << "GetChunks() request" << endl;
+            GetChunks_Request req;
+            req.ParseFromArray(body.data(), body.size());
+            GetChunks_Response res;
 
-            cout << "Chunks: " << args.size() << endl;
-            for (int i=0; i<args.size(); i++) {
-                std::vector<uint64_t> chunk = args[i];
-                cout << "Chunk: " << chunk[0] << ", " << chunk[1] << endl;
+            // requested chunks
+            uint64_t minchunk = req.min_chunk();
+            uint64_t maxchunk = req.max_chunk();
+
+            // requested beams... deep copy to std::vector
+            std::vector<uint64_t> beams;
+            int nbeams = req.beam_size();
+            for (int i=0; i<nbeams; i++) {
+                uint64_t beam = req.beam(i);
+                beams.push_back(beam);
             }
 
-        } else {
-            msgpack::pack(buffer, "No such RPC method");
+            vector<vector<shared_ptr<assembled_chunk> > > snaps = stream->get_ringbuf_snapshots(beams);
+            // iterate over beams
+            for (vector<vector<shared_ptr<assembled_chunk> > >::iterator
+                     it = snaps.begin(); it != snaps.end(); it++) {
+                // iterate over chunks
+                for (vector<shared_ptr<assembled_chunk> >::iterator
+                         chunkit = (*it).begin(); chunkit != (*it).end();
+                     chunkit++) {
+                    shared_ptr<assembled_chunk> chunk = *chunkit;
+                    // If desired chunk range was specified, apply cut.
+                    if (minchunk && (chunk->ichunk < minchunk))
+                        continue;
+                    if (maxchunk && (chunk->ichunk > maxchunk))
+                        continue;
+
+                    Chunk* ch = res.mutable_chunks()->Add();
+                    ch->set_beam_id(chunk->beam_id);
+                    ch->set_nupfreq(chunk->nupfreq);
+                    ch->set_nt_per_packet(chunk->nt_per_packet);
+                    ch->set_fpga_counts_per_sample(chunk->fpga_counts_per_sample);
+                    ch->set_nt_coarse(chunk->nt_coarse);
+                    ch->set_nscales(chunk->nscales);
+                    ch->set_ndata(chunk->ndata);
+                    ch->set_ichunk(chunk->ichunk);
+                    ch->set_isample(chunk->isample);
+
+                    for (int j=0; j<chunk->nscales; j++) {
+                        ch->add_scales(chunk->scales[j]);
+                    }
+                    for (int j=0; j<chunk->nscales; j++) {
+                        ch->add_offsets(chunk->offsets[j]);
+                    }
+
+                    ch->set_data(chunk->data, chunk->ndata);
+                }
+            }
+
+            string replystr = res.SerializeAsString();
+            zmq::message_t reply(reinterpret_cast<const void*>(replystr.data()),
+                                 replystr.size());
+            socket.send(reply);
         }
-        //  Send reply back to client
-        cout << "Sending RPC reply of size " << buffer.size() << endl;
-        zmq::message_t reply(buffer.data(), buffer.size(), NULL);
-        socket.send(reply);
-             */
     }
 
     return NULL;
