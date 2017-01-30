@@ -256,6 +256,15 @@ int main(int argc, char **argv)
     cout << "CPU time: knuth(): " << (cpu_time() - t0) << endl;
     cout << "  sum " << sum << endl;
 
+    t0 = cpu_time();
+    sum = 0;
+    unsigned int rseed = rd();
+    for (int i=0; i<N; i++) {
+        sum += rand_r(&rseed);
+    }
+    cout << "CPU time: rand_r(): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
     std::normal_distribution<> dist;
     t0 = cpu_time();
     fsum = 0.0;
@@ -323,6 +332,16 @@ int main(int argc, char **argv)
     cout << "CPU time: uniform_int(rng): " << (cpu_time() - t0) << endl;
     cout << "  sum " << sum << endl;
 
+    std::uniform_int_distribution<int> iuni256(0, 255);
+
+    t0 = cpu_time();
+    sum = 0;
+    for (int i=0; i<N; i++) {
+      sum += iuni256(rng);
+    }
+    cout << "CPU time: uniform_int(0,255)(rng): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
     std::discrete_distribution<int> dd4( { 0.3, 0.5, 0.7, 0.9 } );
 
     t0 = cpu_time();
@@ -344,6 +363,8 @@ int main(int argc, char **argv)
     }
     cout << "CPU time: dd256: " << (cpu_time() - t0) << endl;
     cout << "  sum " << sum << endl;
+
+    
 
     return 0;
 
