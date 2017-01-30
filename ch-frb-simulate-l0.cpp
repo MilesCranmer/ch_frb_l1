@@ -43,6 +43,57 @@ static vector<int> vrange(int n)
 }
 
 
+float cpu_time() {
+    struct rusage r;
+    float sofar;
+    if (getrusage(RUSAGE_SELF, &r)) {
+        cerr << "Failed to get resource usage" << endl;
+        return -1.0;
+    }
+    sofar = (float)(r.ru_utime.tv_sec + r.ru_stime.tv_sec) +
+        (1e-6 * (r.ru_utime.tv_usec + r.ru_stime.tv_usec));
+    return sofar;
+}
+
+class Gaussian {
+public:
+    Gaussian(double mean=0.0, double stddev=1.0) :
+        _n_uni(0),
+        _uni(-1.0, 1.0), _mean(mean), _stddev(stddev),
+        _have_y2(false)
+    {}
+
+    template< class Generator >
+    double operator()( Generator& g ) {
+        if (_have_y2) {
+            _have_y2 = false;
+            return _mean + _y2 * _stddev;
+        }
+        double x1, x2, w;
+        do {
+            x1 = _uni(g);
+            x2 = _uni(g);
+            _n_uni += 2;
+            w = x1 * x1 + x2 * x2;
+        } while ( w >= 1.0 );
+
+        w = sqrt( (-2.0 * log(w)) / w );
+        _y2 = x2 * w;
+        _have_y2 = true;
+        return _mean + x1 * w * _stddev;
+    }
+
+    int _n_uni;
+
+protected:
+    std::uniform_real_distribution<> _uni;
+    double _mean;
+    double _stddev;
+
+    bool _have_y2;
+    double _y2;
+};
+
 int main(int argc, char **argv)
 {
     double gb_to_simulate = default_gb_to_simulate;
@@ -95,19 +146,124 @@ int main(int argc, char **argv)
     int nchunks = int(gb_to_simulate * 1.0e9 / ostream->nbytes_per_chunk) + 1;
     int npackets = nchunks * ostream->npackets_per_chunk;
     int nbytes = nchunks * ostream->nbytes_per_chunk;
-    cerr << "ch-frb-simulate-l0: sending " << (nbytes/1.0e9) << " GB data (" << npackets << " packets)\n";
+    cerr << "ch-frb-simulate-l0: sending " << (nbytes/1.0e9) << " GB data (" << nchunks << " chunks, " << npackets << " packets)\n";
 
     vector<float> intensity(ostream->elts_per_chunk, 0.0);
     vector<float> weights(ostream->elts_per_chunk, 1.0);
     int stride = ostream->nt_per_packet;
 
-#if 0
     // I'd like to simulate Gaussian noise, but the Gaussian random number generation 
     // actually turns out to be a bottleneck!
     std::random_device rd;
-    std::mt19937 rng(rd());
+    unsigned int seed = rd();
+    std::mt19937 rng(seed);
+
+    std::mt19937_64 rng64(seed);
+
+    int N = 100000000;
+    
+    float t0;
+    uint_fast32_t sum;
+
+    t0 = cpu_time();
+    sum = 0;
+    for (int i=0; i<N; i++) {
+        sum += i;
+    }
+    cout << "CPU time: just sum: " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
+    t0 = cpu_time();
+    sum = 0;
+    for (int i=0; i<N; i++) {
+        sum += rng();
+    }
+    cout << "CPU time: mt.rng(): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
+    t0 = cpu_time();
+    sum = 0;
+    for (int i=0; i<N; i++) {
+        sum += rng64();
+    }
+    cout << "CPU time: mt.rng64(): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
+    std::minstd_rand0 rand0(seed);
+    t0 = cpu_time();
+    sum = 0;
+    for (int i=0; i<N; i++) {
+        sum += rand0();
+    }
+    cout << "CPU time: minstd_0(): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
+    std::minstd_rand rand1(seed);
+    t0 = cpu_time();
+    sum = 0;
+    for (int i=0; i<N; i++) {
+        sum += rand1();
+    }
+    cout << "CPU time: minstd(): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
+    std::ranlux24_base ranlux(seed);
+    t0 = cpu_time();
+    sum = 0;
+    for (int i=0; i<N; i++) {
+        sum += ranlux();
+    }
+    cout << "CPU time: ranlux(): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
     std::normal_distribution<> dist;
-#endif
+    t0 = cpu_time();
+    float fsum = 0.0;
+    for (int i=0; i<N; i++) {
+        fsum += dist(rng);
+    }
+    cout << "CPU time: normal(rng): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
+    Gaussian g;
+    g._n_uni = 0;
+    t0 = cpu_time();
+    fsum = 0.0;
+    for (int i=0; i<N; i++) {
+        fsum += g(rng);
+    }
+    cout << "CPU time: Gaussian(rng): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+    cout << "N uniform rng calls: " << g._n_uni << endl;
+
+    t0 = cpu_time();
+    fsum = 0.0;
+    g._n_uni = 0;
+    for (int i=0; i<N; i++) {
+        fsum += g(rand1);
+    }
+    cout << "CPU time: Gaussian(rand_1): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+    cout << "N uniform rng calls: " << g._n_uni << endl;
+
+    t0 = cpu_time();
+    fsum = 0.0;
+    for (int i=0; i<N; i++) {
+        fsum += dist(rand1);
+    }
+    cout << "CPU time: normal(rand_1): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
+    std::uniform_real_distribution<> udist;
+    t0 = cpu_time();
+    fsum = 0.0;
+    for (int i=0; i<N; i++) {
+        fsum += udist(rng);
+    }
+    cout << "CPU time: uniform(rng): " << (cpu_time() - t0) << endl;
+    cout << "  sum " << sum << endl;
+
+    return 0;
 
     // Send data.  The output stream object will automatically throttle packets to its target bandwidth.
 
