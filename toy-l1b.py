@@ -75,6 +75,7 @@ for ichunk in itertools.count():
         break
 
     print 'toy-l1b.py: received (beam_id,chunk_id) = (%d,%d)' % (beam_id, ichunk)
+    sys.stdout.flush()
 
     # Just for fun, a sanity check here
     assert len(t) == dedisp.ntrees
