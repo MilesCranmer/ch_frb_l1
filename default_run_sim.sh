@@ -1,1 +1,1 @@
-nohup ./ch-frb-simulate-l0 l0_configs/l0_example3.yaml 300 beams.dat > sim.log &
+nohup ./ch-frb-simulate-l0 l0_configs/l0_example1.yaml 30 beams.dat > sim.log &
