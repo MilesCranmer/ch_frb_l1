@@ -20,7 +20,8 @@ nt_per_packet: 16
 # port 6677 on all four NIC's.  Traffic is divided between NIC's "per beam", 
 # i.e. four beams will be sent to each NIC.
 
-ipaddr: [ "10.2.1.101", "10.2.2.101", "10.2.3.101", "10.2.4.101" ]
+ipaddr: [ "10.2.1.100", "10.2.2.100", "10.2.3.100", "10.2.4.100" ]
+#ipaddr: [ "10.2.1.101", "10.2.2.101", "10.2.3.101", "10.2.4.101" ]
 port: 6677
 
 
