@@ -1,16 +1,17 @@
-Beam: 4 SNR: 20 Width: 9 DM: 10 Time: 100
-Beam: 5 SNR: 20 Width: 9 DM: 100 Time: 100
-Beam: 0 SNR: 20 Width: 3 DM: 10 Time: 100
-Beam: 6 SNR: 20 Width: 9 DM: 1000 Time: 100
-Beam: 1 SNR: 20 Width: 3 DM: 100 Time: 100
-Beam: 7 SNR: 20 Width: 9 DM: 5000 Time: 100
-Beam: 2 SNR: 20 Width: 3 DM: 1000 Time: 100
-Beam: 12 SNR: 40 Width: 90 DM: 10 Time: 100
-Beam: 3 SNR: 20 Width: 3 DM: 5000 Time: 100
-Beam: 13 SNR: 40 Width: 90 DM: 100 Time: 100
-Beam: 14 SNR: 40 Width: 90 DM: 1000 Time: 100
-Beam: 15 SNR: 40 Width: 90 DM: 5000 Time: 100
-Beam: 8 SNR: 20 Width: 90 DM: 10 Time: 100
-Beam: 9 SNR: 20 Width: 90 DM: 100 Time: 100
-Beam: 10 SNR: 20 Width: 90 DM: 1000 Time: 100
-Beam: 11 SNR: 20 Width: 90 DM: 5000 Time: 100
+beam, SNR, width, DM, time
+4, 20, 9, 10, 100
+5, 20, 9, 100, 100
+0, 20, 3, 10, 100
+6, 20, 9, 1000, 100
+1, 20, 3, 100, 100
+7, 20, 9, 5000, 100
+2, 20, 3, 1000, 100
+12, 40, 90, 10, 100
+3, 20, 3, 5000, 100
+13, 40, 90, 100, 100
+14, 40, 90, 1000, 100
+15, 40, 90, 5000, 100
+8, 20, 90, 10, 100
+9, 20, 90, 100, 100
+10, 20, 90, 1000, 100
+11, 20, 90, 5000, 100

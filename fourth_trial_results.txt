@@ -1,24 +1,25 @@
-ch-frb-l1b: event -- Beam: 1   SN: 78.6  DM: 52    time [s]: 99.85    grade: 10  itree: 2
-ch-frb-l1b: event -- Beam: 2   SN: 19.5  DM: 2743  time [s]: 100.40   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 2   SN: 14.9  DM: 2691  time [s]: 100.15   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 5   SN: 42.1  DM: 58    time [s]: 100.00   grade: 10  itree: 1
-ch-frb-l1b: event -- Beam: 7   SN: 45.6  DM: 2413  time [s]: 99.99    grade: 10  itree: 1
-ch-frb-l1b: event -- Beam: 7   SN: 18.8  DM: 2381  time [s]: 100.40   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 7   SN: 11.9  DM: 2381  time [s]: 100.15   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 4   SN: 17.0  DM: 113   time [s]: 100.02   grade: 10  itree: 0
-ch-frb-l1b: event -- Beam: 6   SN: 13.2  DM: 26    time [s]: 100.03   grade: 10  itree: 3
-ch-frb-l1b: event -- Beam: 8   SN: 13.3  DM: 867   time [s]: 100.01   grade: 10  itree: 0
-ch-frb-l1b: event -- Beam: 10  SN: 26.8  DM: 1734  time [s]: 100.03   grade: 10  itree: 3
-ch-frb-l1b: event -- Beam: 10  SN: 24.6  DM: 1708  time [s]: 100.40   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 10  SN: 18.6  DM: 1656  time [s]: 100.15   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 9   SN: 55.6  DM: 751   time [s]: 100.03   grade: 10  itree: 3
-ch-frb-l1b: event -- Beam: 9   SN: 58.9  DM: 725   time [s]: 100.41   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 9   SN: 49.2  DM: 725   time [s]: 100.16   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 11  SN: 59.9  DM: 58    time [s]: 100.00   grade: 10  itree: 1
-ch-frb-l1b: event -- Beam: 12  SN: 73.6  DM: 3403  time [s]: 100.08   grade: 10  itree: 2
-ch-frb-l1b: event -- Beam: 12  SN: 48.2  DM: 3364  time [s]: 100.40   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 12  SN: 33.3  DM: 3312  time [s]: 100.15   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 15  SN: 102.2 DM: 52    time [s]: 99.40    grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 13  SN: 87.9  DM: 3998  time [s]: 100.08   grade: 10  itree: 2
-ch-frb-l1b: event -- Beam: 13  SN: 45.8  DM: 3985  time [s]: 99.39    grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 13  SN: 30.2  DM: 3933  time [s]: 100.15   grade: 10  itree: 5
+beam, SNR, DM, time, grade, itree
+1, 78.6, 52, 99.85, 10, 2
+2, 19.5, 2743, 100.40, 10, 4
+2, 14.9, 2691, 100.15, 10, 5
+5, 42.1, 58, 100.00, 10, 1
+7, 45.6, 2413, 99.99, 10, 1
+7, 18.8, 2381, 100.40, 10, 4
+7, 11.9, 2381, 100.15, 10, 5
+4, 17.0, 113, 100.02, 10, 0
+6, 13.2, 26, 100.03, 10, 3
+8, 13.3, 867, 100.01, 10, 0
+10, 26.8, 1734, 100.03, 10, 3
+10, 24.6, 1708, 100.40, 10, 4
+10, 18.6, 1656, 100.15, 10, 5
+9, 55.6, 751, 100.03, 10, 3
+9, 58.9, 725, 100.41, 10, 4
+9, 49.2, 725, 100.16, 10, 5
+11, 59.9, 58, 100.00, 10, 1
+12, 73.6, 3403, 100.08, 10, 2
+12, 48.2, 3364, 100.40, 10, 4
+12, 33.3, 3312, 100.15, 10, 5
+15, 102.2, 52, 99.40, 10, 4
+13, 87.9, 3998, 100.08, 10, 2
+13, 45.8, 3985, 99.39, 10, 4
+13, 30.2, 3933, 100.15, 10, 5

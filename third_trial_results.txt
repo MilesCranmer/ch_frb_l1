@@ -1,19 +1,20 @@
-ch-frb-l1b: event -- Beam: 1   SN: 24.6  DM: 97    time [s]: 100.02   grade: 10  itree: 0
-ch-frb-l1b: event -- Beam: 2   SN: 25.0  DM: 1000  time [s]: 99.95    grade: 10  itree: 0
-ch-frb-l1b: event -- Beam: 2   SN: 7.8   DM: 983   time [s]: 99.40    grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 3   SN: 17.2  DM: 4995  time [s]: 99.82    grade: 10  itree: 2
-ch-frb-l1b: event -- Beam: 3   SN: 9.4   DM: 4969  time [s]: 100.39   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 5   SN: 23.0  DM: 97    time [s]: 100.00   grade: 10  itree: 1
-ch-frb-l1b: event -- Beam: 7   SN: 21.9  DM: 4995  time [s]: 99.82    grade: 10  itree: 2
-ch-frb-l1b: event -- Beam: 7   SN: 12.5  DM: 4969  time [s]: 100.39   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 6   SN: 23.5  DM: 996   time [s]: 100.00   grade: 10  itree: 1
-ch-frb-l1b: event -- Beam: 6   SN: 12.8  DM: 983   time [s]: 99.40    grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 6   SN: 8.6   DM: 932   time [s]: 100.16   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 8   SN: 7.2   DM: 1291  time [s]: 12.06    grade: 10  itree: 0
-ch-frb-l1b: event -- Beam: 11  SN: 20.7  DM: 4969  time [s]: 100.39   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 10  SN: 14.8  DM: 983   time [s]: 100.03   grade: 10  itree: 3
-ch-frb-l1b: event -- Beam: 10  SN: 18.5  DM: 932   time [s]: 100.16   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 15  SN: 7.0   DM: 983   time [s]: 34.66    grade: 10  itree: 2
-ch-frb-l1b: event -- Beam: 15  SN: 40.2  DM: 4969  time [s]: 100.39   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 14  SN: 30.3  DM: 983   time [s]: 100.03   grade: 10  itree: 3
-ch-frb-l1b: event -- Beam: 14  SN: 38.6  DM: 932   time [s]: 100.16   grade: 10  itree: 5
+beam, SNR, DM, time, grade, itree
+1, 24.6, 97, 100.02, 10, 0
+2, 25.0, 1000, 99.95, 10, 0
+2, 7.8, 983, 99.40, 10, 4
+3, 17.2, 4995, 99.82, 10, 2
+3, 9.4, 4969, 100.39, 10, 4
+5, 23.0, 97, 100.00, 10, 1
+7, 21.9, 4995, 99.82, 10, 2
+7, 12.5, 4969, 100.39, 10, 4
+6, 23.5, 996, 100.00, 10, 1
+6, 12.8, 983, 99.40, 10, 4
+6, 8.6, 932, 100.16, 10, 5
+8, 7.2, 1291, 12.06, 10, 0
+11, 20.7, 4969, 100.39, 10, 4
+10, 14.8, 983, 100.03, 10, 3
+10, 18.5, 932, 100.16, 10, 5
+15, 7.0, 983, 34.66, 10, 2
+15, 40.2, 4969, 100.39, 10, 4
+14, 30.3, 983, 100.03, 10, 3
+14, 38.6, 932, 100.16, 10, 5

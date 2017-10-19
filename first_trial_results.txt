@@ -1,17 +1,18 @@
-ch-frb-l1b: event -- Beam: 5   SN: 25.7  DM: 97    time [s]: 100.00   grade: 10  itree: 1
-ch-frb-l1b: event -- Beam: 1   SN: 25.1  DM: 97    time [s]: 100.02   grade: 10  itree: 0
-ch-frb-l1b: event -- Beam: 6   SN: 25.3  DM: 996   time [s]: 100.00   grade: 10  itree: 1
-ch-frb-l1b: event -- Beam: 14  SN: 32.0  DM: 983   time [s]: 100.03   grade: 10  itree: 3
-ch-frb-l1b: event -- Beam: 2   SN: 24.2  DM: 1000  time [s]: 99.95    grade: 10  itree: 0
-ch-frb-l1b: event -- Beam: 10  SN: 16.0  DM: 983   time [s]: 100.03   grade: 10  itree: 3
-ch-frb-l1b: event -- Beam: 6   SN: 14.0  DM: 983   time [s]: 99.40    grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 6   SN: 10.2  DM: 932   time [s]: 100.16   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 14  SN: 40.1  DM: 932   time [s]: 100.16   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 2   SN: 7.6   DM: 983   time [s]: 99.40    grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 10  SN: 20.5  DM: 932   time [s]: 100.16   grade: 10  itree: 5
-ch-frb-l1b: event -- Beam: 3   SN: 15.6  DM: 4995  time [s]: 99.82    grade: 10  itree: 2
-ch-frb-l1b: event -- Beam: 3   SN: 7.4   DM: 4969  time [s]: 100.39   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 7   SN: 23.4  DM: 4995  time [s]: 99.82    grade: 10  itree: 2
-ch-frb-l1b: event -- Beam: 7   SN: 14.2  DM: 4969  time [s]: 100.39   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 11  SN: 18.1  DM: 4969  time [s]: 100.39   grade: 10  itree: 4
-ch-frb-l1b: event -- Beam: 15  SN: 38.5  DM: 4969  time [s]: 100.39   grade: 10  itree: 4
+beam, SNR, DM, time, grade, itree
+5, 25.7, 97, 100.00, 10, 1
+1, 25.1, 97, 100.02, 10, 0
+6, 25.3, 996, 100.00, 10, 1
+14, 32.0, 983, 100.03, 10, 3
+2, 24.2, 1000, 99.95, 10, 0
+10, 16.0, 983, 100.03, 10, 3
+6, 14.0, 983, 99.40, 10, 4
+6, 10.2, 932, 100.16, 10, 5
+14, 40.1, 932, 100.16, 10, 5
+2, 7.6, 983, 99.40, 10, 4
+10, 20.5, 932, 100.16, 10, 5
+3, 15.6, 4995, 99.82, 10, 2
+3, 7.4, 4969, 100.39, 10, 4
+7, 23.4, 4995, 99.82, 10, 2
+7, 14.2, 4969, 100.39, 10, 4
+11, 18.1, 4969, 100.39, 10, 4
+15, 38.5, 4969, 100.39, 10, 4
