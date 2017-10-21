@@ -41,8 +41,7 @@ rpc_address: [ "tcp://10.2.1.101:5555",
 # Each output device will get a separate file I/O thread.  This allows file
 # I/O on each device to proceed independently.
 
-output_devices: ""
-#output_devices: [ "/ssd", "/frb-archiver-1", "/frb-archiver-2", "/frb-archiver-3", "/frb-archiver-4" ]
+output_devices: [ "/ssd", "/frb-archiver-1", "/frb-archiver-2", "/frb-archiver-3", "/frb-archiver-4" ]
 
 
 # Need to use fast kernels in this example (slow kernels are too slow.)
