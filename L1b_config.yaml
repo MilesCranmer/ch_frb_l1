@@ -1,0 +1,16 @@
+---
+verbose: True
+
+TriggerGrouper:
+    snr_thr: 7
+    histogram_triggers: True
+
+CandidateSifter:
+    grade_thr: 0
+    classifier: "L1b_classifier.p"
+
+EventSender:
+    addr: "tcp://10.2.2.101:9001"
+    #addr: "tcp://10.2.2.51:9001"
+    save: True
+...
