@@ -1,1 +1,4 @@
-./ch-frb-simulate-l0 l0_configs/l0_example3.yaml 300 newbeams.dat | tee sim.$(date +'%T%m%d-%H%M%S').log
+#!/bin/bash
+echo $$ > /tmp/default_run_sim.pid
+./generate_pulse_params.py >> newbeams.dat
+./ch-frb-simulate-l0 l0_configs/l0_example3.yaml 300 newbeams.dat | tee sim.$(date +'%H%M%S-%T%m%d').log
