@@ -1,1 +1,5 @@
-./ch-frb-l1 l1_configs/l1_example3.yaml rfi_configs/rfi_placeholder.json bonsai_configs/bonsai_noups_nbeta1.txt L1b_config.yaml 2>&1 | tee l1."$(date +'%H%M%S-%Y%m%d')".log
+#!/bin/bash
+echo $$ > /tmp/default_run_l1.sh
+nohup ./launch_l1.sh &
+sleep 60
+nohup ssh pipeline@frb-compute-0 'cd ~/miles/ch_frb_l1 && source activate chime-frb && timeout 800 ./default_run_sim.sh' &
