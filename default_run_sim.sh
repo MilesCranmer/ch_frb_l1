@@ -1,1 +1,1 @@
-nohup ./ch-frb-simulate-l0 l0_configs/l0_example1.yaml 30 beams.dat > sim.log &
+./ch-frb-simulate-l0 l0_configs/l0_example3.yaml 300 newbeams.dat | tee sim.$(date +'%T%m%d-%H%M%S').log
