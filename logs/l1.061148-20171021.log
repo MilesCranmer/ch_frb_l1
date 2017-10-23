@@ -1,0 +1,28 @@
+Total assembled_chunk memory on node: 86.695 GB (chunk counts: 16*87 + 4*3 + 2*1978)
+ch_frb_io: allocating 43.3475 GB memory pool, cores=[ 0 1 2 3 4 5 6 7 8 9 ], this may take a few seconds...
+ch_frb_io: 43.3475 GB memory pool allocated
+ch_frb_io: allocating 43.3475 GB memory pool, cores=[ 10 11 12 13 14 15 16 17 18 19 ], this may take a few seconds...
+ch_frb_io: 43.3475 GB memory pool allocated
+[L1-RPC-server] bind(tcp://10.2.2.101:5555)
+[L1-RPC-server] bind(tcp://10.2.1.101:5555)
+[L1-RPC-server] bind(tcp://10.2.3.101:5555)
+ch-frb-l1: spawning 16 dedispersion thread(s)
+[L1-RPC-server] bind(tcp://10.2.4.101:5555)
+ch-frb-l1: server is now running, but you will want to wait ~60 seconds before sending packets, or it may crash!  This will be fixed soon...
+ch_frb_io: listening for packets (ip_addr=10.2.2.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.4.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.3.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.1.101, udp_port=6677)
+ch-frb-l1b: event -- Beam: 8   SN: 36.1  DM: 110   time [s]: 99.95    grade: 10  itree: 0
+Error: Found array with 0 sample(s) (shape=(0, 1)) while a minimum of 1 is required.
+L1b -- Beam 8 -- saved S/N histogram to L1_sn_hist_beam8_1710211015
+L1b -- Beam 8 -- n_detections: 1, saved to L1_events_beam8_1710211015.npy
+ch-frb-l1b: event -- Beam: 7   SN: 47.1  DM: 155   time [s]: 100.03   grade: 10  itree: 3
+Error: Found array with 0 sample(s) (shape=(0, 1)) while a minimum of 1 is required.
+L1b -- Beam 7 -- saved S/N histogram to L1_sn_hist_beam7_1710211015
+L1b -- Beam 7 -- n_detections: 1, saved to L1_events_beam7_1710211015.npy
+bonsai: warning: unless an exception was thrown somewhere, you are missing a call to dedisperser::end_dedispersion().
+bonsai::trigger_pipe: Broken pipe.  This means that the child process exited early.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  bonsai::trigger_pipe: Broken pipe.  This means that the child process exited early.
+timeout: the monitored command dumped core

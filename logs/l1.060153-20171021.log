@@ -1,0 +1,116 @@
+Total assembled_chunk memory on node: 86.695 GB (chunk counts: 16*87 + 4*3 + 2*1978)
+ch_frb_io: allocating 43.3475 GB memory pool, cores=[ 0 1 2 3 4 5 6 7 8 9 ], this may take a few seconds...
+ch_frb_io: 43.3475 GB memory pool allocated
+ch_frb_io: allocating 43.3475 GB memory pool, cores=[ 10 11 12 13 14 15 16 17 18 19 ], this may take a few seconds...
+ch_frb_io: 43.3475 GB memory pool allocated
+[L1-RPC-server] bind(tcp://10.2.2.101:5555)
+[L1-RPC-server] bind(tcp://10.2.1.101:5555)
+[L1-RPC-server] bind(tcp://10.2.3.101:5555)
+ch-frb-l1: spawning 16 dedispersion thread(s)
+[L1-RPC-server] bind(tcp://10.2.4.101:5555)
+ch-frb-l1: server is now running, but you will want to wait ~60 seconds before sending packets, or it may crash!  This will be fixed soon...
+ch_frb_io: listening for packets (ip_addr=10.2.3.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.4.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.2.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.1.101, udp_port=6677)
+------------------------------------------------------------------------------------------
+
+ch-frb-l1b: Min detectable DM is 29.1
+
+                  Max DMs --     1656    3313    6625   13251   13250   13249
+          Coarse DM steps --      3.2     6.5    12.9    25.9    51.8   103.5
+    Coarse time steps [s] --    0.063   0.126   0.252   0.503   1.007   2.013
+
+------------------------------------------------------------------------------------------
+ch-frb-l1b: event -- Beam: 0   SN: 44.8  DM: 3177  time [s]: 99.86    grade: 10  itree: 1
+ch-frb-l1b: event -- Beam: 0   SN: 21.1  DM: 3157  time [s]: 99.39    grade: 10  itree: 4
+ch-frb-l1b: event -- Beam: 0   SN: 13.9  DM: 3105  time [s]: 100.15   grade: 10  itree: 5
+L1b -- Beam 0 -- saved S/N histogram to L1_sn_hist_beam0_1710211006
+L1b -- Beam 0 -- n_detections: 3, saved to L1_events_beam0_1710211006.npy
+l1b process exited with status 0
+ch-frb-l1b: event -- Beam: 3   SN: 26.8  DM: 2303  time [s]: 100.02   grade: 10  itree: 3
+ch-frb-l1b: event -- Beam: 3   SN: 22.9  DM: 2277  time [s]: 100.40   grade: 10  itree: 4
+ch-frb-l1b: event -- Beam: 3   SN: 17.7  DM: 2277  time [s]: 100.15   grade: 10  itree: 5
+L1b -- Beam 3 -- saved S/N histogram to L1_sn_hist_beam3_1710211006
+L1b -- Beam 3 -- n_detections: 3, saved to L1_events_beam3_1710211006.npy
+ch-frb-l1b: event -- Beam: 2   SN: 51.4  DM: 958   time [s]: 100.03   grade: 10  itree: 3
+ch-frb-l1b: event -- Beam: 2   SN: 41.0  DM: 932   time [s]: 100.41   grade: 10  itree: 4
+ch-frb-l1b: event -- Beam: 2   SN: 31.7  DM: 932   time [s]: 100.16   grade: 10  itree: 5
+L1b -- Beam 2 -- saved S/N histogram to L1_sn_hist_beam2_1710211006
+L1b -- Beam 2 -- n_detections: 3, saved to L1_events_beam2_1710211006.npy
+ch-frb-l1b: event -- Beam: 1   SN: 24.7  DM: 129   time [s]: 100.03   grade: 10  itree: 3
+ch-frb-l1b: event -- Beam: 1   SN: 20.4  DM: 104   time [s]: 100.41   grade: 10  itree: 4
+L1b -- Beam 1 -- saved S/N histogram to L1_sn_hist_beam1_1710211006
+L1b -- Beam 1 -- n_detections: 2, saved to L1_events_beam1_1710211006.npy
+l1b process exited with status 0
+l1b process exited with status 0
+l1b process exited with status 0
+L1b -- Beam 5 -- saved S/N histogram to L1_sn_hist_beam5_1710211006
+L1b -- Beam 5 -- no detections
+l1b process exited with status 0
+L1b -- Beam 6 -- saved S/N histogram to L1_sn_hist_beam6_1710211006
+L1b -- Beam 6 -- no detections
+l1b process exited with status 0
+ch-frb-l1b: event -- Beam: 4   SN: 128.6 DM: 466   time [s]: 100.03   grade: 10  itree: 3
+ch-frb-l1b: event -- Beam: 4   SN: 7.7   DM: 336   time [s]: 100.03   grade: 0   itree: 3
+ch-frb-l1b: event -- Beam: 4   SN: 129.7 DM: 466   time [s]: 99.40    grade: 10  itree: 4
+ch-frb-l1b: event -- Beam: 4   SN: 7.3   DM: 595   time [s]: 100.03   grade: 0   itree: 3
+ch-frb-l1b: event -- Beam: 4   SN: 107.2 DM: 414   time [s]: 100.16   grade: 10  itree: 5
+L1b -- Beam 4 -- saved S/N histogram to L1_sn_hist_beam4_1710211006
+L1b -- Beam 4 -- n_detections: 5, saved to L1_events_beam4_1710211006.npy
+l1b process exited with status 0
+ch-frb-l1b: event -- Beam: 7   SN: 23.5  DM: 52    time [s]: 99.40    grade: 10  itree: 4
+L1b -- Beam 7 -- saved S/N histogram to L1_sn_hist_beam7_1710211006
+L1b -- Beam 7 -- n_detections: 1, saved to L1_events_beam7_1710211006.npy
+l1b process exited with status 0
+ch-frb-l1b: event -- Beam: 8   SN: 10.4  DM: 26    time [s]: 100.10   grade: 10  itree: 2
+L1b -- Beam 8 -- saved S/N histogram to L1_sn_hist_beam8_1710211006
+L1b -- Beam 8 -- n_detections: 1, saved to L1_events_beam8_1710211006.npy
+l1b process exited with status 0
+L1b -- Beam 10 -- saved S/N histogram to L1_sn_hist_beam10_1710211006
+L1b -- Beam 10 -- no detections
+l1b process exited with status 0
+ch-frb-l1b: event -- Beam: 9   SN: 34.9  DM: 3662  time [s]: 99.83    grade: 10  itree: 2
+ch-frb-l1b: event -- Beam: 9   SN: 18.2  DM: 3623  time [s]: 100.40   grade: 10  itree: 4
+ch-frb-l1b: event -- Beam: 9   SN: 12.8  DM: 3623  time [s]: 100.15   grade: 10  itree: 5
+L1b -- Beam 9 -- saved S/N histogram to L1_sn_hist_beam9_1710211006
+L1b -- Beam 9 -- n_detections: 3, saved to L1_events_beam9_1710211006.npy
+ch-frb-l1b: event -- Beam: 11  SN: 13.1  DM: 537   time [s]: 99.95    grade: 10  itree: 0
+L1b -- Beam 11 -- saved S/N histogram to L1_sn_hist_beam11_1710211006
+L1b -- Beam 11 -- n_detections: 1, saved to L1_events_beam11_1710211006.npy
+l1b process exited with status 0
+l1b process exited with status 0
+ch-frb-l1b: event -- Beam: 13  SN: 7.1   DM: 1252  time [s]: 135.94   grade: 0   itree: 0
+L1b -- Beam 13 -- saved S/N histogram to L1_sn_hist_beam13_1710211006
+L1b -- Beam 13 -- n_detections: 1, saved to L1_events_beam13_1710211006.npy
+l1b process exited with status 0
+L1b -- Beam 12 -- saved S/N histogram to L1_sn_hist_beam12_1710211006
+L1b -- Beam 12 -- no detections
+ch-frb-l1b: event -- Beam: 15  SN: 71.4  DM: 84    time [s]: 100.00   grade: 10  itree: 1
+L1b -- Beam 15 -- saved S/N histogram to L1_sn_hist_beam15_1710211006
+L1b -- Beam 15 -- n_detections: 1, saved to L1_events_beam15_1710211006.npy
+l1b process exited with status 0
+L1b -- Beam 14 -- saved S/N histogram to L1_sn_hist_beam14_1710211006
+L1b -- Beam 14 -- no detections
+l1b process exited with status 0
+l1b process exited with status 0
+All dedispersion threads joined, waiting for pending write requests...
+All write requests written, all i/o threads joined, shutting down RPC servers...
+[L1-RPC-server] L1 RPC server: exiting.
+[L1-RPC-server] L1 RPC server: exiting.
+[L1-RPC-server] L1 RPC server: exiting.
+[L1-RPC-server] L1 RPC server: exiting.
+stream 0: ipaddr=10.2.1.101, udp_port=6677
+    count_packets_good: 1627625
+    assembler_thread_workfrac: 0.141123
+stream 1: ipaddr=10.2.2.101, udp_port=6677
+    count_packets_good: 1627648
+    assembler_thread_workfrac: 0.13901
+stream 2: ipaddr=10.2.3.101, udp_port=6677
+    count_packets_good: 1627648
+    assembler_thread_workfrac: 0.172813
+stream 3: ipaddr=10.2.4.101, udp_port=6677
+    count_packets_good: 1627648
+    assembler_thread_workfrac: 0.17351
+ch_frb_io: memory_slab_pool size_on_exit=2680/2680, low_water_mark=1982/2680
+ch_frb_io: memory_slab_pool size_on_exit=2680/2680, low_water_mark=1980/2680

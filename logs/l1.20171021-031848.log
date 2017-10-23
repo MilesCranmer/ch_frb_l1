@@ -1,0 +1,15 @@
+Total assembled_chunk memory on node: 86.695 GB (chunk counts: 16*87 + 4*3 + 2*1978)
+ch_frb_io: allocating 43.3475 GB memory pool, cores=[ 0 1 2 3 4 5 6 7 8 9 ], this may take a few seconds...
+ch_frb_io: 43.3475 GB memory pool allocated
+ch_frb_io: allocating 43.3475 GB memory pool, cores=[ 10 11 12 13 14 15 16 17 18 19 ], this may take a few seconds...
+ch_frb_io: 43.3475 GB memory pool allocated
+[L1-RPC-server] bind(tcp://10.2.2.101:5555)
+[L1-RPC-server] bind(tcp://10.2.1.101:5555)
+[L1-RPC-server] bind(tcp://10.2.3.101:5555)
+ch-frb-l1: spawning 16 dedispersion thread(s)
+[L1-RPC-server] bind(tcp://10.2.4.101:5555)
+ch-frb-l1: server is now running, but you will want to wait ~60 seconds before sending packets, or it may crash!  This will be fixed soon...
+ch_frb_io: listening for packets (ip_addr=10.2.3.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.1.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.2.101, udp_port=6677)
+ch_frb_io: listening for packets (ip_addr=10.2.4.101, udp_port=6677)

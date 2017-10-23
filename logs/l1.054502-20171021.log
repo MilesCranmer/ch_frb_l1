@@ -1,0 +1,212 @@
+Total assembled_chunk memory on node: 86.695 GB (chunk counts: 16*87 + 4*3 + 2*1978)
+ch_frb_io: allocating 43.3475 GB memory pool, cores=[ 0 1 2 3 4 5 6 7 8 9 ], this may take a few seconds...
+ch_frb_io: 43.3475 GB memory pool allocated
+ch_frb_io: allocating 43.3475 GB memory pool, cores=[ 10 11 12 13 14 15 16 17 18 19 ], this may take a few seconds...
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+Traceback (most recent call last):
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+Traceback (most recent call last):
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 26, in <module>
+        main()
+main()
+                main()
+    main()
+main()
+main()
+    main()
+main()
+      File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+          File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+main()
+        main()
+        main()
+      File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+main()
+main()
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+main()
+        main()
+l1b_instance = L1b(**vars(p.parse_args()))
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+main()
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+l1b_instance = L1b(**vars(p.parse_args()))
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+      File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+l1b_instance = L1b(**vars(p.parse_args()))
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+l1b_instance = L1b(**vars(p.parse_args()))
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+            l1b_instance = L1b(**vars(p.parse_args()))
+  File "../../ch_frb_L1b/ch-frb-l1b.py", line 14, in main
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+l1b_instance = L1b(**vars(p.parse_args()))
+                  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+l1b_instance = L1b(**vars(p.parse_args()))
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+l1b_instance = L1b(**vars(p.parse_args()))
+            l1b_instance = L1b(**vars(p.parse_args()))
+    l1b_instance = L1b(**vars(p.parse_args()))
+l1b_instance = L1b(**vars(p.parse_args()))
+    l1b_instance = L1b(**vars(p.parse_args()))
+l1b_instance = L1b(**vars(p.parse_args()))
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+l1b_instance = L1b(**vars(p.parse_args()))
+l1b_instance = L1b(**vars(p.parse_args()))
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+    l1b_instance = L1b(**vars(p.parse_args()))
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+    self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/module_sequencer.py", line 35, in __init__
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+          File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+self.event_dtype = self.derive_event_dtype()
+        self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+          File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+        self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+self.event_dtype = self.derive_event_dtype()
+          File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+          File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+self.event_dtype = self.derive_event_dtype()
+        dedisp_config = self.dedisp.config
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+        self.event_dtype = self.derive_event_dtype()
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+self.event_dtype = self.derive_event_dtype()
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+                  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+self.event_dtype = self.derive_event_dtype()
+self.event_dtype = self.derive_event_dtype()
+        self.event_dtype = self.derive_event_dtype()
+self.event_dtype = self.derive_event_dtype()
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+dedisp_config = self.dedisp.config
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+self.grouper = TriggerGrouper(self.verbose, beam, **config['TriggerGrouper'])
+    self.event_dtype = self.derive_event_dtype()
+self.event_dtype = self.derive_event_dtype()
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+self.event_dtype = self.derive_event_dtype()
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+self.event_dtype = self.derive_event_dtype()
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 42, in __init__
+        RuntimeError  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+    : dedisp_config = self.dedisp.config
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+self.event_dtype = self.derive_event_dtype()
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+dedisp_config = self.dedisp.config
+bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+
+dedisp_config = self.dedisp.config
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+        dedisp_config = self.dedisp.config
+          File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+    dedisp_config = self.dedisp.config
+    dedisp_config = self.dedisp.config
+self.event_dtype = self.derive_event_dtype()
+self.event_dtype = self.derive_event_dtype()
+dedisp_config = self.dedisp.config
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+      File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+        dedisp_config = self.dedisp.config
+      File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+dedisp_config = self.dedisp.config
+  File "/home/pipeline/ch_frb_L1b/ch_frb_L1b/trigger_grouper.py", line 83, in derive_event_dtype
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+RuntimeErrordedisp_config = self.dedisp.config
+dedisp_config = self.dedisp.config
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+dedisp_config = self.dedisp.config
+:   File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+
+        RuntimeErrordedisp_config = self.dedisp.config
+dedisp_config = self.dedisp.config
+: RuntimeError: bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+RuntimeErrorbonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)  File "python/bonsai/libbonsai_wrapper.pyx", line 638, in bonsai.libbonsai_wrapper.PipedDedisperser.config.__get__ (python/bonsai/libbonsai_wrapper.cpp:8027)
+
+: 
+bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)RuntimeError
+: RuntimeError: bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)
+bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)
+RuntimeError: RuntimeError: RuntimeErrorbonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)RuntimeErrorRuntimeError: : 
+bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser): bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)RuntimeError
+bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)
+RuntimeError: bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser): 
+
+bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)
+
+RuntimeErrorRuntimeError: : bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)bonsai::piped_dedisperser: config_params not received (suspect dedisperser died an early death, or the trigger_pipe was never added to the dedisperser)
+
