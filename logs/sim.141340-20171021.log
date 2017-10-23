@@ -1,0 +1,58 @@
+nbeams_tot = 16
+nthreads_tot = 4
+nupfreq = 16
+nstreams = 4
+streams = [ 10.2.1.101:6677 10.2.2.101:6677 10.2.3.101:6677 10.2.4.101:6677]
+fpga_counts_per_sample = 384
+max_packet_size = 8900
+nfreq_coarse_per_packet = 8
+nt_per_packet = 16
+nbeams_per_stream = 4
+nthreads_per_stream = 1
+nfreq_coarse_per_thread = 1024
+packet_size = 8496
+Num beams: 16
+3 17.8342 21.272  
+36 1896.55 9.13977  
+63 2381.5 116.706  
+63 922.02 11.2444  
+9 16.0036 31.0375  
+6 99.6097 13.742  
+39 33.7765 4.70771  
+30 54.5309 11.0888  
+24 31.8728 11.0384  
+57 34.2091 15.8138  
+3 65.8969 13.2476  
+66 346.425 73.1884  
+27 15.5104 42.0267  
+9 453.491 48.852  
+3 374.803 2.38232  
+12 908.752 2.36001  
+ch_frb_io output stream: dst=10.2.1.101:6677, nbeams=4, nfreq_coarse=1024, npackets=0, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.2.101:6677, nbeams=4, nfreq_coarse=1024, npackets=0, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.3.101:6677, nbeams=4, nfreq_coarse=1024, npackets=0, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.4.101:6677, nbeams=4, nfreq_coarse=1024, npackets=0, target_gbps=0.553125
+Exit file is not open 
+nchunks = 12716 
+Exit file is not open 
+nchunks = 12716 
+Exit file is not open 
+nchunks = 12716 
+Exit file is not open 
+nchunks = 12716 
+Beam: 12 SNR: 42.0267 Width: 27 DM: 15.5104 Time: 100
+Beam: 13 SNR: 48.852 Width: 9 DM: 453.491 Time: 100
+Beam: 14 SNR: 2.38232 Width: 3 DM: 374.803 Time: 100
+Beam: 15 SNR: 2.36001 Width: 12 DM: 908.752 Time: 100
+Beam: 8 SNR: 11.0384 Width: 24 DM: 31.8728 Time: 100
+Beam: 0 SNR: 21.272 Width: 3 DM: 17.8342 Time: 100
+Beam: 9 SNR: 15.8138 Width: 57 DM: 34.2091 Time: 100
+Beam: 1 SNR: 9.13977 Width: 36 DM: 1896.55 Time: 100
+Beam: 10 SNR: 13.2476 Width: 3 DM: 65.8969 Time: 100
+Beam: 2 SNR: 116.706 Width: 63 DM: 2381.5 Time: 100
+Beam: 11 SNR: 73.1884 Width: 66 DM: 346.425 Time: 100
+Beam: 3 SNR: 11.2444 Width: 63 DM: 922.02 Time: 100
+Beam: 4 SNR: 31.0375 Width: 9 DM: 16.0036 Time: 100
+Beam: 5 SNR: 13.742 Width: 6 DM: 99.6097 Time: 100
+Beam: 6 SNR: 4.70771 Width: 39 DM: 33.7765 Time: 100
+Beam: 7 SNR: 11.0888 Width: 30 DM: 54.5309 Time: 100
