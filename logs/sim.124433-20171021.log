@@ -1,0 +1,62 @@
+nbeams_tot = 16
+nthreads_tot = 4
+nupfreq = 16
+nstreams = 4
+streams = [ 10.2.1.101:6677 10.2.2.101:6677 10.2.3.101:6677 10.2.4.101:6677]
+fpga_counts_per_sample = 384
+max_packet_size = 8900
+nfreq_coarse_per_packet = 8
+nt_per_packet = 16
+nbeams_per_stream = 4
+nthreads_per_stream = 1
+nfreq_coarse_per_thread = 1024
+packet_size = 8496
+Num beams: 16
+36 1261.03 3.3252  
+18 695.13 26.3733  
+87 12.9443 3.56113  
+66 48.7404 8.73827  
+57 243.122 14.0747  
+15 1294.55 13.327  
+3 279.966 4.74008  
+18 84.3763 6.03611  
+15 3759.06 19.4553  
+21 31.9824 3.47929  
+3 62.4551 113.465  
+12 32.9484 4.7183  
+27 10.0241 34.9031  
+21 638.05 12.7896  
+18 54.2016 22.8504  
+15 37.5502 23.6963  
+ch_frb_io output stream: dst=10.2.1.101:6677, nbeams=4, nfreq_coarse=1024, npackets=0, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.2.101:6677, nbeams=4, nfreq_coarse=1024, npackets=0, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.3.101:6677, nbeams=4, nfreq_coarse=1024, npackets=0, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.4.101:6677, nbeams=4, nfreq_coarse=1024, npackets=0, target_gbps=0.553125
+Exit file is not open 
+nchunks = 12716 
+Exit file is not open 
+nchunks = 12716 
+Exit file is not open 
+nchunks = 12716 
+Exit file is not open 
+nchunks = 12716 
+Beam: 8 SNR: 19.4553 Width: 15 DM: 3759.06 Time: 100
+Beam: 9 SNR: 3.47929 Width: 21 DM: 31.9824 Time: 100
+Beam: 10 SNR: 113.465 Width: 3 DM: 62.4551 Time: 100
+Beam: 11 SNR: 4.7183 Width: 12 DM: 32.9484 Time: 100
+Beam: 12 SNR: 34.9031 Width: 27 DM: 10.0241 Time: 100
+Beam: 13 SNR: 12.7896 Width: 21 DM: 638.05 Time: 100
+Beam: 14 SNR: Beam: 0 SNR: 22.8504 Width: 18 DM: 54.2016 Time: 100
+3.3252 Width: 36 DM: 1261.03 Time: 100
+Beam: 15 SNR: 23.6963 Width: 15 DM: 37.5502 Time: 100
+Beam: 1 SNR: 26.3733 Width: 18 DM: 695.13 Time: 100
+Beam: 2 SNR: 3.56113 Width: 87 DM: 12.9443 Time: 100
+Beam: 3 SNR: 8.73827 Width: 66 DM: 48.7404 Time: 100
+Beam: 4 SNR: 14.0747 Width: 57 DM: 243.122 Time: 100
+Beam: 5 SNR: 13.327 Width: 15 DM: 1294.55 Time: 100
+Beam: 6 SNR: 4.74008 Width: 3 DM: 279.966 Time: 100
+Beam: 7 SNR: 6.03611 Width: 18 DM: 84.3763 Time: 100
+ch_frb_io output stream: dst=10.2.1.101:6677, nbeams=4, nfreq_coarse=1024, npackets=1627648, gbps=0.507436, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.2.101:6677, nbeams=4, nfreq_coarse=1024, npackets=1627648, gbps=0.508408, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.3.101:6677, nbeams=4, nfreq_coarse=1024, npackets=1627648, gbps=0.507247, target_gbps=0.553125
+ch_frb_io output stream: dst=10.2.4.101:6677, nbeams=4, nfreq_coarse=1024, npackets=1627648, gbps=0.506894, target_gbps=0.553125
