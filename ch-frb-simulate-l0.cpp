@@ -524,7 +524,7 @@ int main(int argc, char **argv)
     int num_beams_extra = num_beams-(nthreads*p.nbeams_tot);
     int num_beams_per_thread = p.nbeams_tot + (num_beams_extra)/nthreads;
 
-    int nthreads = p.nthreads_tot;
+    nthreads = p.nthreads_tot;
     
     vector<shared_ptr<ch_frb_io::intensity_network_ostream>> streams(nthreads);
     vector<std::thread> threads(nthreads);
